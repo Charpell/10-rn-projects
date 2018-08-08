@@ -1,11 +1,17 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import Header from './app/components/Header';
+import Mid from './app/components/Mid';
+import Body from './app/components/Body';
+
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Boiler Plate</Text>
+        <Header />
+        <Mid />
+        <Body />
       </View>
     );
   }
@@ -14,7 +20,7 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#33ff62',
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
