@@ -1,12 +1,18 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, ScrollView } from 'react-native';
+
+import Header from './app/components/Header';
+import HeroImage from './app/components/HeroImage';
+import Body from './app/components/Body';
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Boiler Plate</Text>
-      </View>
+      <ScrollView style={styles.container}>
+        <Header />
+        <HeroImage />
+        <Body />
+      </ScrollView>
     );
   }
 }
@@ -14,8 +20,6 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#33ff62',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#fff',
   },
 });
