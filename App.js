@@ -1,11 +1,26 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
+
+import data from './components/search.json';
+
+import Navbar from './components/Navbar';
+import Tabbar from './components/Tabbar';
+import Body from './components/Body';
+
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Boiler Plate</Text>
+        <Navbar />
+        <ScrollView>
+          <Body video= {data.items[0]} />
+          <Body video= {data.items[1]} />
+          <Body video= {data.items[2]} />
+          <Body video= {data.items[3]} />
+          <Body video= {data.items[4]} />
+        </ScrollView>
+        <Tabbar />
       </View>
     );
   }
@@ -14,8 +29,6 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#33ff62',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#fff',
   },
 });
