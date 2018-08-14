@@ -1,11 +1,24 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
+
+
+import CardImage from "./components/CardImage";
+import FooterBadge from "./components/FooterBadge";
+
 
 export default class App extends React.Component {
+  async componentWillMount() {
+    await Expo.Font.loadAsync({
+      Roboto: require("native-base/Fonts/Roboto.ttf"),
+      Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf")
+    });
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <Text>Boiler Plate</Text>
+        <CardImage />
+        <FooterBadge />
       </View>
     );
   }
@@ -14,8 +27,6 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#33ff62',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    backgroundColor: "#fff"
+  }
 });
