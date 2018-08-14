@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 
 import CardImage from "./components/CardImage";
 import FooterBadge from "./components/FooterBadge";
+import Sidebar from "./components/Sidebar";
 
 
 export default class App extends React.Component {
